@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,8 +10,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="./bs/css/flatly.min.css" />
-		<link rel="stylesheet" href="./styles.css" />
+		<link rel="stylesheet" href="{% static '/bs/css/flatly.min.css' %}" />
+		<link rel="stylesheet" href="{% static '/styles.css' %}" />
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,31 +26,14 @@
 			
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-4" id="content">
-					<h2>WHAT DO YOU WANT TO DO TODAY?</h2>
-					
-					<form action="#" method="POST" role="form">
-					
-						<div class="form-group">
-							<div class="input-group">
-							  <input type="text" class="form-control" placeholder="Enter todo e.g. Delete junk files" aria-label="Todo" aria-describedby="add-btn">
-							  <span class="input-group-btn">
-								  <button type="submit" class="btn btn-default" id="add-btn">ADD</button>
-							  </span>
-							</div>
-						</div>
-					</form>
+					<h2>LIST OF TESTING DATA</h2>
 
 					<div class="row t10">
 						<div class="col-lg-12">
 							<div class="btn-toolbar">
 								<div class="btn-group">
 									<button type="button" class="btn btn-warning">
-										<i class="glyphicon glyphicon-trash"></i> DELETE COMPLETED
-									</button>
-								</div>
-								<div class="btn-group">
-									<button type="button" class="btn btn-warning">
-										<i class="glyphicon glyphicon-trash"></i> DELETE ALL
+										<i class="glyphicon glyphicon-trash"></i> REFRESH DATA
 									</button>
 								</div>
 							</div>
@@ -57,9 +41,9 @@
 					</div>
 
 					<ul class="list-group t20">
-						<li class="list-group-item">Create my new awesome website.</li>
-						<li class="list-group-item todo-completed">Attend weekly coding session.</li>
-						<li class="list-group-item">Visit the gym.</li>
+						{% for user_data in user_data_list %}
+							<li class="list-group-item">ENVIRONMENT: {{ user_data.environment }} | Number: {{ user_data.number }} | Email: {{ user_data.mail }} | Eligible E2E: {{ user_data.eligible_e2e }} | Eligible EMI: {{ user_data.eligible_emi }} | OTP: {{ user_data.otp }}</li>
+						{% endfor %}
 					</ul>
 				</div>
 			</div>
@@ -67,15 +51,15 @@
 			<footer>
 				<div class="row pad">
 					<div class="col-lg-12 text-center">
-						Copyright &copy; 2017 <strong>ToDo App</strong>
+						Copyright &copy; 2020 <strong>HomeCredit India</strong>
 					</div>
 				</div>
 			</footer>
 		</div>
 
 		<!-- jQuery -->
-		<script src="./bs/js/jquery.min.js"></script>
+		<script src="{% static '/bs/js/jquery.min.js' %}"></script>
 		<!-- Bootstrap JavaScript -->
-		<script src="./bs/js/bootstrap.min.js"></script>
+		<script src="{% static '/bs/js/bootstrap.min.js' %}"></script>
 	</body>
 </html>

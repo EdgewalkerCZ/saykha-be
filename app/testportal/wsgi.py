@@ -1,5 +1,5 @@
 """
-WSGI config for saykha project.
+WSGI config for testportal project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

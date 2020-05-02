@@ -1,18 +1,19 @@
 body {
-	background: rgba(44, 62, 80, .8);
+	background: #E3E2DF;
 	font-family: 'Oswald', 'Futura', sans-serif;
 }
 #wrapper {
-	margin-top: 10% !important;
+	margin-top: 5% !important;
 }
 #content {
-	background: beige;
+	background: crimson;
 	padding: 25px;
 }
 #content > h2 {
 	font-size: 18px;
 	text-align: center;
 	padding-top: 0;
+	color: #E3E2DF;
 }
 .t10 {
 	margin-top: 10px;
@@ -26,5 +27,5 @@ body {
 }
 footer {
 	margin-top: 20px;
-	color: white;
+	color: crimson;
 }
